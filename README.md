@@ -27,7 +27,7 @@ Open `preview.html` in a browser to view all templates stacked on a dark canvas 
 
 - **Layout:** 600px max-width white card on `#f6f6f6` page background, 6px border radius, 24px padding.
 - **Font:** Arial, sans-serif.
-- **Brand color:** `#5D2BE6` (purple — used for logo accents, OTP digits, primary buttons, and links).
+- **Brand color:** `#340481` (purple — used for logo accents, OTP digits, primary buttons, and links).
 - **Heading color:** `#222`. Body color: `#333`. Muted text: `#777`.
 - **Header:** GetEXBOX logo on the left, social icons (Instagram / Facebook / X) on the right.
   - The verification email omits social icons per design.
