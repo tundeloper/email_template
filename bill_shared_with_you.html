@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; background:#f6f6f6; padding:20px; margin:0;">
+	<div style="max-width:600px;margin:auto;background:#ffffff;padding:24px;border-radius:6px;">
+
+		<!-- Header -->
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+			<tr>
+				<td align="left"><img src="Images/Logo.png" alt="GetEXBOX" style="height:28px;display:block;"></td>
+				<td align="right">
+					<a href="{{ .InstagramURL }}" style="margin-left:8px;"><img src="Images/instagram.png" alt="Instagram" style="height:18px;vertical-align:middle;"></a>
+					<a href="{{ .FacebookURL }}" style="margin-left:8px;"><img src="Images/facebook.png" alt="Facebook" style="height:18px;vertical-align:middle;"></a>
+					<a href="{{ .TwitterURL }}" style="margin-left:8px;"><img src="Images/twitter_x.png" alt="X" style="height:18px;vertical-align:middle;"></a>
+				</td>
+			</tr>
+		</table>
+
+		<h2 style="color:#222;margin:0 0 14px 0;font-size:20px;">A Bill Has Been Shared With You 🤝</h2>
+
+		<p style="color:#333;margin:0 0 14px 0;">Hello <strong>{{ .Name }}</strong> 👋,</p>
+
+		<p style="color:#333;margin:0 0 14px 0;line-height:1.5;">
+			You have been added to a shared bill by <strong>{{ .CreatorName }}</strong> in Exbox.
+		</p>
+
+		<p style="color:#333;margin:0 0 8px 0;"><strong>Bill details:</strong></p>
+		<p style="color:#333;margin:0 0 14px 0;">Reference ID: <strong>{{ .ReferenceID }}</strong></p>
+
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #eee;border-radius:6px;margin-bottom:18px;">
+			<tr>
+				<td style="padding:14px;">
+					<table width="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td width="44" valign="middle">
+								<div style="width:36px;height:36px;border-radius:50%;background:#FFD96A;text-align:center;line-height:36px;font-size:18px;">🛒</div>
+							</td>
+							<td valign="middle">
+								<div style="color:#222;font-weight:bold;">{{ .BillName }}</div>
+								<div style="color:#777;font-size:13px;">Category: {{ .Category }}</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:18px;">
+			<tr><td style="padding:8px 0;color:#333;border-bottom:1px solid #f0f0f0;">Total Amount</td><td align="right" style="padding:8px 0;color:#222;border-bottom:1px solid #f0f0f0;font-weight:bold;">₦{{ .TotalAmount }}</td></tr>
+			<tr><td style="padding:8px 0;color:#333;border-bottom:1px solid #f0f0f0;">Number of Contributors</td><td align="right" style="padding:8px 0;color:#222;border-bottom:1px solid #f0f0f0;">{{ .NumberOfContributors }}</td></tr>
+			<tr><td style="padding:8px 0;color:#333;border-bottom:1px solid #f0f0f0;">Creation Date</td><td align="right" style="padding:8px 0;color:#222;border-bottom:1px solid #f0f0f0;">{{ .CreationDate }}</td></tr>
+			<tr><td style="padding:8px 0;color:#333;border-bottom:1px solid #f0f0f0;">Creator</td><td align="right" style="padding:8px 0;color:#222;border-bottom:1px solid #f0f0f0;">{{ .CreatorName }}</td></tr>
+			<tr><td style="padding:8px 0;color:#222;font-weight:bold;">Your Contribution</td><td align="right" style="padding:8px 0;color:#222;font-weight:bold;">₦{{ .YourContribution }}</td></tr>
+		</table>
+
+		<!-- Buttons -->
+		<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:18px;">
+			<tr>
+				<td style="border:1px solid #5D2BE6;border-radius:6px;">
+					<a href="{{ .ViewBillURL }}" style="display:inline-block;padding:10px 18px;color:#5D2BE6;text-decoration:none;font-weight:bold;">View Bill Details</a>
+				</td>
+				<td style="width:10px;"></td>
+				<td style="background:#5D2BE6;border-radius:6px;">
+					<a href="{{ .PayNowURL }}" style="display:inline-block;padding:10px 18px;color:#ffffff;text-decoration:none;font-weight:bold;">Pay Now</a>
+				</td>
+			</tr>
+		</table>
+
+		<p style="color:#333;margin:0 0 14px 0;line-height:1.5;">
+			You can now view and manage this bill alongside <strong>{{ .CreatorName }}</strong> using Exbox.
+		</p>
+
+		<p style="color:#333;margin:0;">Thanks,<br>Exbox Team.</p>
+
+		<hr style="border:none;border-top:1px solid #eee;margin:28px 0;">
+
+		<p style="color:#333;margin:0 0 10px 0;">Exbox at the touch of a button! Download our app for Android &amp; iOS</p>
+		<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+			<tr>
+				<td><a href="{{ .GooglePlayURL }}"><img src="Images/google%20play.png" alt="Google Play" style="height:36px;display:block;"></a></td>
+				<td style="width:8px;"></td>
+				<td><a href="{{ .MacAppStoreURL }}"><img src="Images/AppStore.png" alt="Mac App Store" style="height:36px;display:block;"></a></td>
+			</tr>
+		</table>
+		<p style="color:#777;font-size:12px;margin:0;">
+			Questions or faq? Contact us at <a href="mailto:support@Exbox.com" style="color:#5D2BE6;text-decoration:underline;">support@Exbox.com</a>. If you'd rather not receive this kind of email, Don't want any more emails from Exbox? <a href="{{ .UnsubscribeURL }}" style="color:#5D2BE6;text-decoration:underline;">Unsubscribe</a>.
+		</p>
+	</div>
+</body>
+</html>
