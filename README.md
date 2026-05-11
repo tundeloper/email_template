@@ -45,8 +45,11 @@ All templates use Go `html/template` syntax (`{{ .Field }}`).
 - `{{ .GooglePlayURL }}`, `{{ .MacAppStoreURL }}` — store links
 - `{{ .UnsubscribeURL }}` — unsubscribe link
 
-### OTP templates (`verification_code.html`, `reset_password.html`)
+### OTP templates (`verification_code.html`)
 - `{{ .OTP }}` — a 4-character string. Rendered as 4 individual boxed digits via `{{ index .OTP 0 }}` … `{{ index .OTP 3 }}`.
+
+### `reset_password.html`
+- `{{ .ResetPasswordURL }}` — secure, time-limited link the user clicks to set a new password (expires in 10 minutes).
 
 ### `wallet_credited.html`
 - `{{ .Amount }}`, `{{ .Date }}`
